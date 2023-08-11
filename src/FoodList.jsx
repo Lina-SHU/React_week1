@@ -145,7 +145,7 @@ function FoodList() {
                         </td>
                         <td><small>{food.description}</small></td>
                         <td>{food.price}</td>
-                        <td className='d-flex justify-content-between'>
+                        <td className='d-flex justify-content-between align-items-center'>
                             <button className="btn btn-primary" onClick={() => removeStock(food)}>-</button>
                             {food.stock}
                             <button className="btn btn-primary" onClick={() => addStock(food)}>+</button>
