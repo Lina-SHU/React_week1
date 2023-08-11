@@ -136,16 +136,16 @@ function FoodList() {
                         <td>
                             <div>
                                 {food.name}
-                                <button type="button" className='btn btn-primary btn-sm ms-2' onClick={editName}>編輯</button>
+                                <button type="button" className='btn btn-primary ms-2' onClick={editName}>編輯</button>
                             </div>
-                            <div className='d-none'>
+                            <div className='input-group d-none'>
                                 <input type="text" value={food.name} className='form-control' name={food.id} onChange={editFoodName} />
-                                <button type="button" className='btn btn-primary btn-sm mt-2' onClick={finishEdit}>完成</button>
+                                <button type="button" className='btn btn-primary' onClick={finishEdit}>完成</button>
                             </div>
                         </td>
                         <td><small>{food.description}</small></td>
                         <td>{food.price}</td>
-                        <td className='d-flex justify-content-between align-items-center'>
+                        <td className='d-flex justify-content-between'>
                             <button className="btn btn-primary" onClick={() => removeStock(food)}>-</button>
                             {food.stock}
                             <button className="btn btn-primary" onClick={() => addStock(food)}>+</button>
